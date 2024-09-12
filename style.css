@@ -1,0 +1,102 @@
+/* =============== CSS COMMON START =================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* =============== CSS COMMON END =================== */
+/* body{
+    cursor: pointer;
+} */
+#gal{
+    background-color: rgba(0 , 0, 0, 0.5);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#gal .img_nav{
+    width: calc(20% - 10px);
+    margin: 0 5px;
+    cursor: pointer;
+
+}
+#gal .pop_up{
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+#gal .pop_up.active{
+    visibility: visible;
+    opacity: 1;
+}
+#gal .pop_up img{
+    height: 550px;
+}
+#gal .pop_up .cross{
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    top: 30px;
+    right: 30px;
+    position: absolute;
+    transition: 0.5s;
+}
+#gal .pop_up .cross:hover{
+    background-color: #fff;
+    color: #000;
+    transform: rotate(360deg);
+}
+#gal .pop_up .arrow{
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    display: inline-block;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#gal .pop_up .arrow.left{
+    left: 30%;
+}
+#gal .pop_up .arrow.right{
+    right: 30%;
+}
+#gal .pop_up .arrow:hover{
+    background-color: #fff;
+    color: #000;
+}
